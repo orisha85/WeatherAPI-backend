@@ -15,7 +15,6 @@ namespace WeatherAPI.Controllers
     public class WeatherAPI : ControllerBase
     {
         private IRepository _repository;
-        public WeatherAPI(IRepository repo) => _repository = repo;
 
         [ResponseCache(Duration = 300, Location = ResponseCacheLocation.Any, VaryByQueryKeys = new[] { "city" })]
 
